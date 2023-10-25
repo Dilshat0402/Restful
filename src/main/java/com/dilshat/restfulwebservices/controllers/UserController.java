@@ -1,6 +1,7 @@
 package com.dilshat.restfulwebservices.controllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
 import com.dilshat.restfulwebservices.Exceptions.UserNotFoundException;
 import com.dilshat.restfulwebservices.dao.UserDaoService;
 import com.dilshat.restfulwebservices.models.User;
@@ -19,7 +20,7 @@ public class UserController {
 
     private UserDaoService service;
 
-    private UserController(UserDaoService service){
+    public UserController(UserDaoService service){
         this.service = service;
     }
 
@@ -39,7 +40,7 @@ public class UserController {
         }
 
         EntityModel<User> entityModel = EntityModel.of(user);
-        WebMvcLinkBuilder link = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getAllUsers());
+        WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).getAllUsers());
         entityModel.add(link.withRel("all-users"));
         return entityModel;
     }
