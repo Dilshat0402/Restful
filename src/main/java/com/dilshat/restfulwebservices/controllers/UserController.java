@@ -4,7 +4,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import com.dilshat.restfulwebservices.Exceptions.UserNotFoundException;
 import com.dilshat.restfulwebservices.dao.UserDaoService;
-import com.dilshat.restfulwebservices.models.User;
+import com.dilshat.restfulwebservices.entitiyes.User;
 import jakarta.validation.Valid;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;

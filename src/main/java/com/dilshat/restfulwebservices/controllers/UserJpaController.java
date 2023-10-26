@@ -1,7 +1,7 @@
 package com.dilshat.restfulwebservices.controllers;
 
 import com.dilshat.restfulwebservices.Exceptions.UserNotFoundException;
-import com.dilshat.restfulwebservices.models.User;
+import com.dilshat.restfulwebservices.entitiyes.User;
 import com.dilshat.restfulwebservices.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.hateoas.EntityModel;

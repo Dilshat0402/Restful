@@ -1,6 +1,6 @@
 package com.dilshat.restfulwebservices.dao;
 
-import com.dilshat.restfulwebservices.models.User;
+import com.dilshat.restfulwebservices.entitiyes.User;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
