@@ -65,6 +65,10 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
     @Override
     public String toString() {
         return "User{" +

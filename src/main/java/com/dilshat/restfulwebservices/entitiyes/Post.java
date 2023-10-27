@@ -2,6 +2,7 @@ package com.dilshat.restfulwebservices.entitiyes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Post {
@@ -12,6 +13,7 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private User user;
+    @Size(min = 5)
     private String description;
 
     public Post() {
@@ -31,6 +33,14 @@ public class Post {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
